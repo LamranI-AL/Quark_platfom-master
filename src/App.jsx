@@ -8,25 +8,45 @@ import PageNotFounded from "./pages/PageNotFounded";
 import { ChakraProvider } from "@chakra-ui/react";
 import Events from "./pages/Events";
 import "./index.css";
+import { createContext, useEffect, useState } from "react";
+import Axios from "axios";
 
-// import "tailwindcss";
-// import "tailwindcss/tailwind.css";
+export const AppContext = createContext();
 
 function App() {
+  const [eventes, setEventes] = useState([]);
+  useEffect(() => {
+    getEventss();
+  }, []);
+
+  const getEventss = async () => {
+    return Axios.get("https://quark-api-ensabm.vercel.app/event")
+      .then(async (res) => {
+        await setEventes(res.data);
+      })
+      .catch((error) => {
+        console.log("error : " + error);
+      });
+  };
+
+  console.log(eventes);
   return (
-    <ChakraProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Homme />} />
-            <Route path="/details" element={<Detaille />} />
-            <Route path="/Events" element={<Events />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="*" element={<PageNotFounded />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </ChakraProvider>
+    <AppContext.Provider value={eventes}>
+      <ChakraProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Homme />} />
+              <Route path="/details" element={<Detaille />} />
+              <Route path="/Events" element={<Events />} />
+
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="*" element={<PageNotFounded />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </ChakraProvider>
+    </AppContext.Provider>
   );
 }
 

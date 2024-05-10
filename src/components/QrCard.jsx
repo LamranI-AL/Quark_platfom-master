@@ -1,6 +1,7 @@
-import { Box, Center, Image } from "@chakra-ui/react";
+import { Box, Center } from "@chakra-ui/react";
 import { QRCode, Button } from "antd";
 import React from "react";
+import { SiReactquery } from "react-icons/si";
 
 const QrCard = () => {
   const downloadQRCode = () => {
@@ -25,17 +26,16 @@ const QrCard = () => {
         p={8}
       >
         <Box textAlign="center" mb={4}>
-          <Box m={3} _hover={{ transform: "scale(1.1)" }}>
+          <Box m={3} mb={5} _hover={{ transform: "scale(1.1)" }}>
             <QRCode
-              // size={70}
               className="myqrcode"
               value="https://www.instagram.com/quark.ensabm/"
               bgColor={"white"}
             />
           </Box>
-          <Button size="sm" color="teal" onClick={downloadQRCode}>
+          {/* <Button size="sm" color="teal" onClick={downloadQRCode}>
             Download
-          </Button>
+          </Button> */}
         </Box>
       </Box>
     </Center>
