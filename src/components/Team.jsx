@@ -42,7 +42,7 @@ const teamMembers = [
     image: aymaneImage,
   },
   {
-    id: 4,
+    id: 3,
     name: "Arwa Tiyari",
     descriptionIndiv:
       "Hi, Im Arwa Tayari I'm a sophomore student at the national school of applied sciences at beni melal and I'm the communication manager of the Quark club, Since childhood, I've been captivated by the worlds of astronomy and engineering. It all started with movies and conversations with my dad, sparking a lifelong passion for exploring the cosmos and diving into the intricacies of engineering. Im also passionate about social media and influencing life that's why I'm the one who's responsible of all the club's platforms and social media accounts. that's a bit about me, I'm excited to share, learn and contribute with you, we are looking forward to working together.",
@@ -53,7 +53,7 @@ const teamMembers = [
     image: arwaImage,
   },
   {
-    id: 5,
+    id: 4,
     name: "Youssef Ait Karroum",
     descriptionIndiv:
       "Je suis AIT KARROUM YOUSSEF, un étudiant en deuxième année de classe préparatoire à l'École Nationale des Sciences Appliquées de Béni Mellal. Actuellement, j'occupe le poste de secrétaire général du club QUARK . Depuis mon enfance, je suis passionné par tout ce qui touche à l'astronomie et l'informatique. Lorsque j'ai intégré l'ENSA, j'ai exploré ce mélange d'intérêts au sein d'un club parmi de nombreux autres. Mon parcours m'a permis d'approfondir mes connaissances dans ces domaines fascinants. J'ai participé à des discussions sur les dernières découvertes astronomiques, j'ai observé les étoiles lors de soirées d'observation  En tant que secrétaire général du club QUARK, je m'efforce de partager ma passion avec d'autres étudiants et d'organiser des événements enrichissants pour notre communauté. Si vous avez des idées ou des projets liés à l'astronomie ou l'informatique, je serais ravi d'en discuter et de collaborer avec vous !",
@@ -64,7 +64,7 @@ const teamMembers = [
     image: youssefImage,
   },
   {
-    id: 3,
+    id: 5,
     name: "abdelhakim echahbi",
     descriptionIndiv:
       "Je suis Abdelhakim Echahbi, un étudiant en première année à l'ENSA de Beni Mellal, et j'occupe le poste de responsable technique au sein du club Quark.Ma passion pour le design et l'informatique ne fait que croître, et je m'efforce maintenant de mettre en pratique ces intérêts au sein de mes études et de mes engagements extra-scolaires. Ma participation active dans le club Quark témoigne de mon désir de contribuer de manière significative à des projets techniques et créatifs.",
@@ -98,7 +98,7 @@ const teamMembers = [
     image: abdRehmanImage,
   },
   {
-    id: 7,
+    id: 8,
     name: "El Mehdi Ait Said",
     descriptionIndiv:
       "Mehdi Ait Said, étudiant en première année du cycle préparatoire à l'ENSA BM, actuellement Responsable de l'équipe de créativité au sein du Club Quark. Notre objectif principal au sein du club est de favoriser l'épanouissement créatif et l'exploration des talents des étudiants dans le domaine de la technologie. Cela se traduit par la stimulation d'idées innovantes et la création d'un environnement propice à l'expression de la créativité",
@@ -165,13 +165,7 @@ const TeamSection = () => {
   };
   return (
     <motion.div initial="initial" variants={variants} whileInView="inView">
-      <Box
-        m={1}
-        mt={20}
-        // borderTop={"4px solid"}
-        borderRadius={8}
-        p={6}
-      >
+      <Box m={1} mt={20} borderRadius={8} p={6}>
         <Box m={2}>
           <Heading textAlign="center" as="h2" size="xl" mb="8">
             Members de bureau

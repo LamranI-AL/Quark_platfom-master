@@ -11,11 +11,15 @@ function EventsSection() {
       <Heading p={5} textAlign={"center"} mb={10}>
         Evenements
       </Heading>
-      <SimpleGrid columns={{ base: 2, sm: 3, lg: 4 }} spacing={2}>
+      <SimpleGrid columns={{ base: 1, sm: 3, lg: 4 }} spacing={2}>
         {eventes.length > 0 ? (
           eventes.map((event) => (
             <Box mt={4}>
-              <EventGride name={event.name} description={event.description} />
+              <EventGride
+                key={event._id}
+                name={event.name}
+                description={event.description}
+              />
             </Box>
           ))
         ) : (

@@ -44,7 +44,7 @@ const TeamDescription = ({ title, description, imgUrl }) => {
         p={6}
         borderWidth="1px"
         borderRadius="lg"
-        m={5}
+        m={{ base: 0, lg: 4 }}
         borderTop="5px solid"
         borderColor={"#5F374B"}
       >
@@ -72,14 +72,7 @@ const TeamDescriptionSection = () => {
     },
   };
   return (
-    <motion.div
-      // initial={{ x: "100%", opacity: 0 }}
-      // animate={{ x: "0%", opacity: 1 }}
-      // transition={{ duration: 1.1 }}
-      initial="initial"
-      variants={variants}
-      whileInView="inView"
-    >
+    <motion.div initial="initial" variants={variants} whileInView="inView">
       <Box
         m={2}
         p={5}

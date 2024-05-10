@@ -23,7 +23,7 @@ function EventsSectionForHome() {
         <Heading p={8} textAlign={"center"}>
           Last Evenements
         </Heading>
-        <SimpleGrid columns={{ base: 2, lg: 4 }} spacing={1}>
+        <SimpleGrid columns={{ base: 1, lg: 4 }} spacing={1}>
           {eventts
             .map((event) => (
               <Box m={5} key={event._id}>

@@ -29,7 +29,7 @@ function App() {
       });
   };
 
-  console.log(eventes);
+  // console.log(eventes);
   return (
     <AppContext.Provider value={eventes}>
       <ChakraProvider>

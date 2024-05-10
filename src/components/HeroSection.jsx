@@ -3,9 +3,7 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import bgImage1 from "../assets/HeroImage/IMG-20230126-WA0056.jpg";
 import ModelTasck from "./ModelTasck";
-// import Buuton from "./Button/Buuton";
 
-// Composant de la section Hero
 const HeroSection = () => {
   const buttonName = "À propos";
   const title = "Explorez le Club Quark :";
@@ -37,6 +35,8 @@ const HeroSection = () => {
           >
             <Image
               src={bgImage1}
+              borderRadius={30}
+              p={{ base: 4 }}
               alt="Image"
               w="100%"
               h="100%"
@@ -46,7 +46,7 @@ const HeroSection = () => {
         </Box>
 
         <Box flex="1">
-          <Box p="8">
+          <Box p={{ base: 4, lg: 6 }}>
             <Text
               fontSize={{ base: "3xl", lg: "6xl" }}
               fontWeight="bold"

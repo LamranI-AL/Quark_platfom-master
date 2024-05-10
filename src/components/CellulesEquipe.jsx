@@ -8,7 +8,6 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import ModelTasck from "./ModelTasck";
 import imgCreationProjet from "../assets/imges/cellulCreationProj.png";
 import imgRecherchScientifique from "../assets/imges/cellulScience.png";
@@ -70,14 +69,7 @@ const CellulesEquipe = () => {
     },
   };
   return (
-    <motion.div
-      // initial={{ x: "100%", opacity: 0 }}
-      // animate={{ x: "0%", opacity: 1 }}
-      // transition={{ duration: 1.1 }}
-      initial="initial"
-      variants={variants}
-      whileInView="inView"
-    >
+    <motion.div initial="initial" variants={variants} whileInView="inView">
       <Box m={5} p={10}>
         <Heading
           as="h2"
@@ -87,8 +79,8 @@ const CellulesEquipe = () => {
         >
           Équipe de Recherche Scientifique
         </Heading>
-        <Text px={20}>{decriptionEquipe}</Text>
-        <SimpleGrid pl={5} columns={{ base: 1, lg: 2 }} spacing={1}>
+        <Text px={{ base: 5, lg: 20 }}>{decriptionEquipe}</Text>
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={1}>
           {teamDescriptions.map((description) => (
             <EquipeCelluleDescription
               key={description.id}
