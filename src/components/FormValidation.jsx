@@ -143,7 +143,7 @@ const FormValidation = () => {
       ) : (
         ""
       )}
-      {isValidFormFinal && Object.keys(errors).length === 0 ? (
+      {Object.keys(errors).length === 0 ? (
         <Alert
           status="success"
           variant="subtle"
@@ -180,7 +180,7 @@ const FormValidation = () => {
           <FormLabel ml={3}>Age</FormLabel>
           <Input type="text" id="age" ref={ageRef} />
           {displayError("age")}
-          <FormLabel ml={3}>Message to Quark</FormLabel>
+          <FormLabel ml={3}>add comment to Quark</FormLabel>
           <Textarea type="text" id="message" ref={messageRef} />
           {displayError("message")}
           <div>

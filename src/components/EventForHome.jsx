@@ -66,7 +66,7 @@ function EventsSectionForHome() {
         <SimpleGrid columns={{ base: 2, lg: 4 }} spacing={1}>
           {eventts
             .map((event) => (
-              <Box m={5}>
+              <Box m={5} key={event._id}>
                 <EventGride
                   name={event.name}
                   description={event.description}

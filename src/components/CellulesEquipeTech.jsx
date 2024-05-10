@@ -6,7 +6,6 @@ import imgProgramation from "../assets/imges/cellulProgramming.png";
 import imgDisign from "../assets/imges/cellulDesigne.png";
 import imgMarketing from "../assets/imges/cellulMarketing.png";
 
-// Données des descriptions d'équipe
 const teamDescriptions = [
   {
     id: 1,
@@ -31,7 +30,6 @@ const teamDescriptions = [
   },
 ];
 
-// Composant pour afficher la description d'une équipe avec animation
 const EquipeCelluleDescription = ({ title, description, imgUrl }) => {
   return (
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -54,8 +52,6 @@ const EquipeCelluleDescription = ({ title, description, imgUrl }) => {
     </motion.div>
   );
 };
-
-// Composant Section pour afficher les descriptions des équipes avec animation
 const CellulesEquipeTech = () => {
   const variants = {
     initial: { opacity: 0, y: 20 },
@@ -70,14 +66,7 @@ const CellulesEquipeTech = () => {
   const description =
     "&Le marketing englobe un ensemble de stratégies et d'activités visant à promouvoir un produit, un service, une marque ou une entreprise. Ses objectifs principaux sont les suivants : Sensibilisation : Le marketing vise à accroître la notoriété d'un produit, d'une entreprise ou d'une marque auprès du public cible Rentabilité : Le marketing vise à générer des revenus et des profits Acquisition de clients : Le marketing cherche à attirer de nouveaux clients ou à fidéliser les clients existants || la cellule de programmation a fixé plusieurs objectifs sous forme des mini projets pour mettre en évidence tout ce qui a été appris durant les formations et les ateliers. Création d'un jeu astronomique sous le nom Quark, Création d'un similateur e-commerce, Création d'un robot, Création du site web.";
   return (
-    <motion.div
-      // initial={{ x: "100%", opacity: 0 }}
-      // animate={{ x: "0%", opacity: 1 }}
-      // transition={{ duration: 1.1 }}
-      initial="initial"
-      variants={variants}
-      whileInView="inView"
-    >
+    <motion.div initial="initial" variants={variants} whileInView="inView">
       <Box m={5} p={10}>
         <Heading
           as="h2"

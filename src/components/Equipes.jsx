@@ -102,7 +102,6 @@ const TeamDescriptionSection = () => {
         </SimpleGrid>
         <Box textAlign="center" m={5}>
           <Link to={"/details"}>
-            {/* <button class="" role=""></button> */}
             <Button color={"white"} className="button-86" role="button">
               Learn More
             </Button>

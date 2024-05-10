@@ -55,14 +55,7 @@ const CellulesEquipeCreatititi = () => {
   const description =
     "En règle générale: Nous sommes un collectif de talents variés, tous unis par une passion commune pour la créativité. En travaillant ensemble: nous repoussons les limites de créativité, nous embrassons la diversité des idées, nous créons des projets exceptionnels.";
   return (
-    <motion.div
-      // initial={{ x: "100%", opacity: 0 }}
-      // animate={{ x: "0%", opacity: 1 }}
-      // transition={{ duration: 1.1 }}
-      initial="initial"
-      variants={variants}
-      whileInView="inView"
-    >
+    <motion.div initial="initial" variants={variants} whileInView="inView">
       <Box m={5} p={10}>
         <Heading
           as="h2"

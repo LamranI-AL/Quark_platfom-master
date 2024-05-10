@@ -9,9 +9,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 const MembesrMessages = ({ users }) => {
-  return users.map((user) => {
+  return users.map((user, key) => {
     return (
-      <Card key={user.id}>
+      <Card key={key}>
         <CardHeader>
           <Heading size="md"> {user.name}</Heading>
         </CardHeader>

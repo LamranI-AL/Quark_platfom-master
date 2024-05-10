@@ -73,7 +73,7 @@ const NavBar = () => {
         <Spacer />
         <Flex display={{ base: "none", md: "flex" }} alignItems="center">
           <Box m={1}>
-            <button class="btn">
+            <button className="btn">
               <SlSocialFacebook color="#5F374B" />
             </button>
           </Box>
@@ -82,7 +82,7 @@ const NavBar = () => {
               href="https://www.linkedin.com/company/quark-ensabm"
               target="_blank"
             >
-              <button class="btn">
+              <button className="btn">
                 <TiSocialLinkedin color="#5F374B" />
               </button>
             </a>
@@ -90,7 +90,7 @@ const NavBar = () => {
 
           <Box m={1}>
             <a href="https://www.instagram.com/quark.ensabm/" target="_blank">
-              <button class="btn">
+              <button className="btn">
                 <TiSocialInstagram color="#5F374B" />
               </button>
             </a>
