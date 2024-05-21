@@ -30,7 +30,7 @@ import Footer from "../components/Footer";
 const ContactUs = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    Axios.get("https://quark-api-ensabm.vercel.app/message").then((res) => {
+    Axios.get("http://localhost:3000/message").then((res) => {
       setUsers(res.data);
     });
   }, [users]);
@@ -56,9 +56,6 @@ const ContactUs = () => {
               <Box ml={6} m={1}>
                 <UserButton />
               </Box>
-              <Text mr={4} mt={3} fontSize="small">
-                be member
-              </Text>
             </Flex>
           </Flex>
         </Flex>

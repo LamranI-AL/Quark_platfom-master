@@ -84,7 +84,7 @@ const FormValidation = () => {
     }
   };
   const creatUser = () => {
-    Axios.post("https://quark-api-ensabm.vercel.app/CreatMessage", {
+    Axios.post("http://localhost:3000/CreatMessage", {
       name: nameRef.current.value,
       email: emailRef.current.value,
       age: ageRef.current.value,

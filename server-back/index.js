@@ -10,7 +10,7 @@ const app = express();
 // donner acces a port 5173
 app.use(
   cors({
-    origin: "https://quark-ensa-beni-mellal.vercel.app/",
+    origin: "http://localhost:3000",
   })
 );
 app.use(express.json()); // pour parser les données envoyées dans le body

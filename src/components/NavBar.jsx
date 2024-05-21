@@ -31,6 +31,7 @@ import {
 } from "@clerk/clerk-react";
 import { useEffect, useState } from "react";
 import "./Css/reseauxSocieaux.css";
+import "./Css/buuton.css";
 
 const NavBar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -217,9 +218,11 @@ const NavBar = () => {
             </Box>
           </Box>
         </SignedIn>
-        {/* <Box mt={2}>
-          <ColorModeSwitch />
-        </Box> */}
+        <Box mt={2}>
+          <Link to={"https://quark-events-apply.vercel.app/"}>
+            <button className="button">QuarkEvents</button>
+          </Link>
+        </Box>
       </Flex>
     </div>
   );
