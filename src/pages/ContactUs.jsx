@@ -36,7 +36,6 @@ const ContactUs = () => {
       }
     );
   }, [users]);
-  // console.log(users);
   const { isSignedIn, user, isLoaded } = useUser();
 
   return (
