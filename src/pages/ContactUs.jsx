@@ -30,9 +30,11 @@ import Footer from "../components/Footer";
 const ContactUs = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    Axios.get("http://localhost:3000/message").then((res) => {
-      setUsers(res.data);
-    });
+    Axios.get("https://server-back-quark-master-api.vercel.app/message").then(
+      (res) => {
+        setUsers(res.data);
+      }
+    );
   }, [users]);
   // console.log(users);
   const { isSignedIn, user, isLoaded } = useUser();
