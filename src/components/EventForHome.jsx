@@ -1,11 +1,11 @@
 import { Box, Button, Heading, SimpleGrid } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import EventGride from "./EventGride";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Axios from "axios";
 import "./Css/buuton.css";
 import { motion } from "framer-motion";
-import { AppContext } from "../App";
+import axios from "axios";
 
 function EventsSectionForHome() {
   const variants = {
@@ -16,7 +16,21 @@ function EventsSectionForHome() {
       transition: { duration: 1, staggerChildren: 0.4 },
     },
   };
-  const eventts = useContext(AppContext);
+  const [eventes, setEventes] = useState([]);
+  useEffect(() => {
+    getEventss();
+  }, []);
+
+  const getEventss = async () => {
+    return axios
+      .get("https://quark-api-ensabm.vercel.app/event")
+      .then(async (res) => {
+        await setEventes(res.data);
+      })
+      .catch((error) => {
+        console.log("error : " + error);
+      });
+  };
   return (
     <motion.div initial="initial" variants={variants} whileInView="inView">
       <Box p={5} m={3}>
@@ -24,7 +38,7 @@ function EventsSectionForHome() {
           Last Evenements
         </Heading>
         <SimpleGrid columns={{ base: 1, lg: 4 }} spacing={1}>
-          {eventts
+          {eventes
             .map((event) => (
               <Box m={5} key={event._id}>
                 <EventGride

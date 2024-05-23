@@ -1,11 +1,25 @@
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import EventGride from "./EventGride";
 import { Empty } from "antd";
-import { useContext } from "react";
-import { AppContext } from "../App";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function EventsSection() {
-  const eventes = useContext(AppContext);
+  const [eventes, setEventes] = useState([]);
+  useEffect(() => {
+    getEventss();
+  }, []);
+
+  const getEventss = async () => {
+    return axios
+      .get("https://quark-api-ensabm.vercel.app/event")
+      .then(async (res) => {
+        await setEventes(res.data);
+      })
+      .catch((error) => {
+        console.log("error : " + error);
+      });
+  };
   return (
     <Box m={5} p={5}>
       <Heading p={5} textAlign={"center"} mb={10}>
