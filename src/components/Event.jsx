@@ -1,10 +1,11 @@
-import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Box, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import EventGride from "./EventGride";
-import { Empty } from "antd";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Skeleton from "./Skeleton";
 
 function EventsSection() {
+  const tabOfSkeleton = [1, 2, 3, 4];
   const [eventes, setEventes] = useState([]);
   useEffect(() => {
     getEventss();
@@ -19,6 +20,9 @@ function EventsSection() {
       .catch((error) => {
         console.log("error : " + error);
       });
+  };
+  const skeleton = () => {
+    return tabOfSkeleton.map((item) => <Skeleton key={item} />);
   };
   return (
     <Box m={5} p={5}>
@@ -37,9 +41,7 @@ function EventsSection() {
             </Box>
           ))
         ) : (
-          <Box>
-            <Empty />
-          </Box>
+          <>{skeleton()}</>
         )}
       </SimpleGrid>
     </Box>
