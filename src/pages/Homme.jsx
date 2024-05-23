@@ -1,8 +1,8 @@
-import TeamSection from "../components/Team";
+// import TeamSection from "../components/Team";
 import TeamDescriptionSection from "../components/Equipes";
 import HeroSection from "../components/HeroSection";
 import { Box, Center } from "@chakra-ui/react";
-import Event from "../components/Event";
+// import Event from "../components/Event";
 import EventsSectionForHome from "../components/EventForHome";
 import Footer from "../components/Footer";
 import QrCard from "../components/QrCard";
@@ -22,9 +22,9 @@ const Homme = () => {
         <EventsSectionForHome />{" "}
       </section>
 
-      <section>
+      {/* <section>
         <TeamSection />
-      </section>
+      </section> */}
 
       <section>
         <QrCard />

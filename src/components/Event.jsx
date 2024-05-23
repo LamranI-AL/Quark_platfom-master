@@ -12,7 +12,7 @@ function EventsSection() {
 
   const getEventss = async () => {
     return axios
-      .get("https://quark-api-ensabm.vercel.app/event")
+      .get("https://server-back-quark-master-api.vercel.app/event")
       .then(async (res) => {
         await setEventes(res.data);
       })
