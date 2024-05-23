@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Message from "../components/Message";
-import Axios from "axios";
 import {
   SignInButton,
   SignOutButton,
@@ -26,15 +25,16 @@ import { redirect } from "react-router-dom";
 import { Empty } from "antd";
 import contact from "../assets/imges/Contact.png";
 import Footer from "../components/Footer";
+import axios from "axios";
 
 const ContactUs = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    Axios.get("https://server-back-quark-master-api.vercel.app/message").then(
-      (res) => {
+    axios
+      .get("https://server-back-quark-master-api.vercel.app/message")
+      .then((res) => {
         setUsers(res.data);
-      }
-    );
+      });
   }, [users]);
   const { isSignedIn, user, isLoaded } = useUser();
 
@@ -118,16 +118,16 @@ const ContactUs = () => {
                 <Image
                   src={contact}
                   alt="Image"
-                  w={{ base: "50% ", md: "80%" }}
-                  h={{ base: "50% ", md: "80%" }}
-                  p={10}
-                  m={10}
+                  w="100%"
+                  h="100%"
+                  p={1}
+                  m={2}
                   objectFit="cover"
                 />
               </motion.div>
             </Box>
 
-            <Box flex="1" p="8">
+            <Box flex="1" p="6">
               <FormValidation />
             </Box>
           </SimpleGrid>

@@ -1,5 +1,3 @@
-import ColorModeSwitch from "./ColorModeSwitch";
-
 import {
   Box,
   Button,
@@ -27,7 +25,6 @@ import {
   SignedIn,
   SignedOut,
   UserButton,
-  useUser,
 } from "@clerk/clerk-react";
 import { useEffect, useState } from "react";
 import "./Css/reseauxSocieaux.css";
@@ -49,9 +46,6 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const { isSignedIn, user, isLoaded } = useUser();
-
   return (
     <div>
       <Flex pl={2}>
@@ -145,6 +139,16 @@ const NavBar = () => {
                 <SignInButton />
               </SignedOut>
             </MenuItem>
+            <MenuItem>
+              <Link to={"https://quark-events-apply.vercel.app/"}>
+                <button class="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24">
+                    <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
+                  </svg>
+                  up
+                </button>
+              </Link>
+            </MenuItem>
           </MenuList>
         </Menu>
       </Flex>
@@ -218,9 +222,14 @@ const NavBar = () => {
             </Box>
           </Box>
         </SignedIn>
-        <Box mt={2}>
+        <Box p={2}>
           <Link to={"https://quark-events-apply.vercel.app/"}>
-            <button className="button">QuarkEvents</button>
+            <button class="button">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24">
+                <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
+              </svg>
+              quarkEvents
+            </button>
           </Link>
         </Box>
       </Flex>

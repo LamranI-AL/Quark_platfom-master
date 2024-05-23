@@ -165,7 +165,7 @@ const FormValidation = () => {
       ) : (
         ""
       )}
-      <FormControl m={5}>
+      <FormControl m={3}>
         <Box p={4} boxShadow={"xl"} borderRadius={20} textAlign="center" mt="8">
           <Heading as={"h4"} mb={4}>
             Drop us a line !
